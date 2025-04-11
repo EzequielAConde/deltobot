@@ -91,7 +91,8 @@ Instalación
 11. en la raiz ejecutar: venv\Scripts\activate
 12. estando en el entorno virtual
 13. ejecutar: pip install -r requirements.txt
-14. cuando termine de instalar ejecutar: python start.py
+14. Agregar Clave al firebase_key.json
+15. cuando termine de instalar ejecutar: python start.py
 
 
 
