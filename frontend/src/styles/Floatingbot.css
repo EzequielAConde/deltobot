@@ -1,0 +1,19 @@
+.bot-floating {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .bot-floating:hover {
+    transform: scale(1.1);
+  }
+  
+  .bot-img {
+    width: 100px;
+    height: 150px;
+    image-rendering: pixelated;
+  }
+  

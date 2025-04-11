@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(
+  to bottom,
+  #6896d3 0%,
+  #4fa9b0 25%,
+  #8fd0d3 50%,
+  #cceff1 75%,
+  #ffffff 100%
+);
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.contenedor {
+  background-color: #fffde7;
+  border: 2px solid #4caf50;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px 20px 20px;
+  box-shadow: 4px 4px 0 #333;
+  margin: auto;
+}
+
+.contenedor::before {
+  content: "_ ◻ X";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  color: #333;
+  background-color: #cfead8;
+  width: 100%;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  border-bottom: 2px solid #4caf50;
+}
+
+h1 {
+  color: #0d47a1;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-size: clamp(12px, 4vw, 16px);
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  color: #4caf50;
+  font-size: clamp(8px, 3vw, 10px);
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #2e7d32;
+  margin: 20px 0 10px;
+  font-size: clamp(10px, 3vw, 12px);
+}
+
+p {
+  font-size: clamp(8px, 2.5vw, 10px);
+  margin: 5px 0;
+}
+
+.pais {
+  color: #f500c7;
+  font-size: clamp(10px, 3vw, 12px);
+}
+
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 400px;
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 6px;
+  font-size: clamp(7px, 2.5vw, 9px);
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+}
+
+
+.planet-icon {
+  margin-top: 10px;
+  width: clamp(25px, 10vw, 40px);
+}
+
+
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.forecast-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 8px;
+  text-align: center;
+  width: min(110px, 30%);
+  box-shadow: 2px 2px 0 #333;
+  font-size: clamp(7px, 2.5vw, 9px);
+}
+
+.forecast-card img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .contenedor {
+    width: 95%;
+    padding: 50px 10px 20px 10px;
+  }
+
+  table {
+    min-width: 300px;
+  }
+
+  .forecast-card {
+    width: 100px;
+  }
+
+  .forecast-card img {
+    max-width: 60px;
+  }
+}

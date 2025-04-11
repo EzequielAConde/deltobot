@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.clima-contenedor {
+  background-color: transparent;
+  padding: 30px 10px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  font-family: 'Press Start 2P', cursive;
+  color: #333;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.clima-info {
+  margin-bottom: 20px;
+}
+
+.clima-titulo {
+  font-size: clamp(11px, 2vw, 14px);
+  color: #4186cc;
+  margin-bottom: 8px;
+}
+
+.clima-pais {
+  font-size: clamp(12px, 2.5vw, 16px);
+  color: #c540ad;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+
+.clima-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.tarjeta-clima {
+  width: 30%;
+  max-width: 120px;
+  min-width: 80px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  font-size: clamp(8px, 2vw, 11px);
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.tarjeta-clima img {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .tarjeta-clima {
+    width: 45%;
+    min-width: 70px;
+    font-size: 7px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 350px) {
+  .tarjeta-clima {
+    width: 100%;
+    max-width: none;
+  }
+}
