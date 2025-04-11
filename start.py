@@ -41,7 +41,7 @@ def main():
 
     bot_command = [python_path, "bot.py"]
     api_command = [python_path, "-m", "uvicorn", "main:app", "--reload"]
-    frontend_command = ["npm", "run", "dev"]  # o ["yarn", "dev"] si usas yarn
+    frontend_command = ["npm", "run", "dev"] 
 
     bot_process = run_process(bot_command, bot_dir)
     api_process = run_process(api_command, api_dir)
