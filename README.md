@@ -56,11 +56,11 @@ En la web:
 
 Instalación
 
-1. Abrir cmd y ejecutar(con el nombre que corresponda): cd %USERPROFILE%\Desktop
+1. Abrir cmd y ejecutar(con el nombre que corresponda): cd C:\Users\usuario\Desktop
 2. ejecutar: mkdir DeltBot
 3. ejecutar: cd DeltoBot
-4. ejecutar: cd deltobot (esto para estar dentro de la desarrollo sin subcarpetas)
-5. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
+4. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
+5. ejecutar: cd deltobot (esto para estar dentro de la desarrollo sin subcarpetas)
 6. ejecutar: code . (para abrir el visual Studio)
 7. En la raiz ejecutar: python -m venv .venv
 8. moverse al frontend: cd frontend
