@@ -74,7 +74,7 @@ Elegir el modo de seguridad (modo prueba recomendado para desarrollo).
 Despues va a:
 https://console.firebase.google.com/project/NOMBREDELABASE/settings/serviceaccounts/adminsdk
 
-pone generar nueva clave privada, los datos de ese json los agrega en deltobot\backend\bot que se encuentra el firebase_key.json
+pone generar nueva clave privada, los datos de ese json se agregan mas adelante en deltobot\backend\bot que se encuentra el firebase_key.json
 
 Instalación
 
