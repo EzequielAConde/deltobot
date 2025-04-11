@@ -54,15 +54,37 @@ En la web:
 - Plan divertido generado por IA para esa ciudad.
 - Estética retro, con íconos pixelados y fondo animado.
 
+
+Configuración de Firebase:
+
+Crear un proyecto en Firebase
+Ir a https://console.firebase.google.com.
+
+Crear un nuevo proyecto.
+
+🗄Crear la base de datos
+Desde el panel del proyecto:
+
+Ir a Cloud Firestore o Realtime Database.
+
+Hacer clic en “Crear base de datos”.
+
+Elegir el modo de seguridad (modo prueba recomendado para desarrollo).
+
+Despues va a:
+https://console.firebase.google.com/project/NOMBREDELABASE/settings/serviceaccounts/adminsdk
+
+pone generar nueva clave privada, los datos de ese json los agrega en deltobot\backend\bot que se encuentra el firebase_key.json
+
 Instalación
 
-1. Abrir cmd y ejecutar(con el nombre que corresponda): cd C:\Users\usuario\Desktop
+1. Abrir cmd e ir hasta el Desktop
 2. ejecutar: mkdir DeltBot
 3. ejecutar: cd DeltoBot
 4. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
 5. ejecutar: cd deltobot (esto para estar dentro de la desarrollo sin subcarpetas)
 6. ejecutar: code . (para abrir el visual Studio)
-7. En la raiz ejecutar: python -m venv .venv
+7. En la raiz ejecutar: py -m venv .venv
 8. moverse al frontend: cd frontend
 9. ejecutar: npm install
 10. Volver a la raiz: cd..
