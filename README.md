@@ -30,7 +30,12 @@ deltobot/
 ├── backend/
 │   ├── bot/           
 │   ├── api/           
-├── frontend/           
+├── frontend/
+│
+│.gitignore
+│README.md
+│requirements.txt
+│start.py
 ```
 
 Funcionalidades
@@ -52,18 +57,14 @@ En la web:
 
 Instalación
 
-1. Cloná este repositorio:
-   ```bash
-   git clone https://github.com/tuusuario/deltobot.git
-   cd deltabot
-   ```
+1. Descargar repositorio
+2. En la raiz ejecutar: python -m venv .venv
+3. cd frontend
+4. ejecutar: npm install
+5. cd..
+6. en la raiz ejecutar: venv\Scripts\activate
+7. estando en el entorno virtual
+8. ejecutar: pip install -r requirements.txt
+9. cuando termine de instalar ejecutar: python start.py
 
-2. Instalá los requerimientos:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Ejecutá todo:
-
-   python start.py
 
