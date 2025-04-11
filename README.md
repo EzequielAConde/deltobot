@@ -1,98 +1,121 @@
-🤖 DELTOBOT
+# 🤖 DELTOBOT
+**Tu asistente virtual retro en Telegram con IA, clima, emociones y datos en tiempo real.**
 
-Tu asistente virtual en Telegram con IA, clima, emociones y estilo retro.
+---
 
-Descripción
+## 📌 Descripción
 
-Deltobot es un bot de Telegram que utiliza Inteligencia Artificial para ayudarte a:
+**DELTOBOT** es un bot de Telegram potenciado con Inteligencia Artificial que ofrece una experiencia interactiva, útil y entretenida. Con una estética retro y funcionalidades modernas, este asistente puede:
 
-- Consultar el clima de cualquier ciudad con pronóstico y recomendaciones personalizadas.
-- Llevar un contador de interacciones por usuario.
+- Consultar el clima de cualquier ciudad con pronósticos y recomendaciones personalizadas.
+- Llevar un contador individual de interacciones por usuario.
 - Analizar el estado emocional de una conversación completa.
-- Hablar con una IA sobre cualquier tema.
-- Ver un tablero web retro con datos actualizados en tiempo real.
+- Conversar libremente con una IA sobre cualquier tema.
+- Mostrar un tablero web estilo retro con información actualizada en tiempo real.
 
-Además, incluye un frontend en **React** que muestra los datos almacenados en **Firebase**, como el país más buscado y el pronóstico semanal.
+Incluye un **frontend en React** que se conecta a **Firebase** para mostrar:
+- El país más consultado.
+- El pronóstico semanal.
+- Un plan divertido generado por IA.
 
-Tecnologías
+---
 
-- **Python**: Backend principal del bot.
-- **FastAPI**: API para exponer los datos y procesar el clima.
-- **React**: Interfaz visual estilo retro.
+## 💪 Tecnologías utilizadas
+
+- **Python**: Lógica principal del bot.
+- **FastAPI**: API para exponer datos y procesar la información climática.
+- **React**: Interfaz web con estilo retro (íconos pixelados y fondo animado).
 - **Firebase**: Base de datos en tiempo real.
-- **OpenWeatherMap API**: Datos de clima.
-- **Cohere API**: IA para generar texto y analizar emociones.
+- **OpenWeatherMap API**: Fuente de datos meteorológicos.
+- **Cohere API**: Análisis emocional y generación de texto por IA.
 
-Estructura del proyecto
+---
+
+## 🗂️ Estructura del proyecto
 
 ```
 deltobot/
 ├── backend/
 │   ├── bot/           
-│   ├── api/           
-├── frontend/
+│   ├── api/            
+├── frontend/           
 │
-│README.md
-│requirements.txt
-│start.py
+├── README.md
+├── requirements.txt
+├── start.py           
 ```
 
-Funcionalidades
+---
 
-En Telegram:
+## ⚙️ Funcionalidades
 
-- `/start`: Inicia el bot.
-- Opción **Clima**: consultás cualquier ciudad y te devuelve clima, temperatura y un plan sugerido.
-- Opción **Contador**: cada vez que lo apretás, suma uno y lo guarda por usuario.
-- **Conversación libre**: hablás con una IA y podés pedirle el estado emocional del intercambio.
-- **Base en Firebase**: almacena nombre, contador y países que consultaste.
+### En Telegram
 
-En la web:
+- **/start**: Inicia el bot.
+- **Clima**: Consultá el clima de cualquier ciudad. Devuelve temperatura, pronóstico y un plan sugerido.
+- **Contador**: Cada vez que lo presionás, suma uno y lo guarda por usuario.
+- **Conversación libre**: Hablá con una IA y pedile que analice el estado emocional del diálogo.
+- **Base de datos**: Se guarda nombre, contador e historial de países consultados en Firebase.
 
-- Tablero con usuarios, contador y países más buscados.
-- Pronóstico semanal del país más consultado.
-- Plan divertido generado por IA para esa ciudad.
-- Estética retro, con íconos pixelados y fondo animado.
+### En la Web
 
+- **Dashboard retro** con:
+  - Lista de usuarios e interacciones.
+  - Países más buscados.
+  - Pronóstico semanal del país más consultado.
+  - Plan divertido sugerido por la IA.
 
-Configuración de Firebase:
+---
 
-Crear un proyecto en Firebase
-Ir a https://console.firebase.google.com.
+## 🔧 Configuración de Firebase
 
-Crear un nuevo proyecto.
+1. Crear un proyecto en [Firebase Console](https://console.firebase.google.com).
+2. Ir a **Cloud Firestore** o **Realtime Database** y crear la base de datos (modo prueba recomendado para desarrollo).
+3. Navegar a:  
+   `https://console.firebase.google.com/project/NOMBRE_DE_TU_PROYECTO/settings/serviceaccounts/adminsdk`
+4. Generar una nueva clave privada.
+5. Guardar el archivo JSON como `firebase_key.json` en la ruta:  
+   `deltobot/backend/bot/firebase_key.json`
 
-🗄Crear la base de datos
-Desde el panel del proyecto:
+---
 
-Ir a Cloud Firestore o Realtime Database.
+## 🖥️ Instalación y ejecución
 
-Hacer clic en “Crear base de datos”.
+1. Abrí la terminal (cmd) y dirigite al escritorio:
+   ```bash
+   mkdir Deltobot
+   cd Deltobot
+   git clone https://github.com/EzequielAConde/deltobot.git
+   cd deltobot
+   code .  # Abre Visual Studio Code
+   ```
 
-Elegir el modo de seguridad (modo prueba recomendado para desarrollo).
+2. Crear y activar entorno virtual:
+   ```bash
+   py -m venv .venv
+   .venv\Scripts\activate
+   ```
 
-Despues va a:
-https://console.firebase.google.com/project/NOMBREDELABASE/settings/serviceaccounts/adminsdk
+3. Instalar dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-pone generar nueva clave privada, los datos de ese json se agregan mas adelante en deltobot\backend\bot que se encuentra el firebase_key.json
+4. Instalar frontend:
+   ```bash
+   cd frontend
+   npm install
+   cd ..
+   ```
 
-Instalación
+5. Agregar el archivo `firebase_key.json` a la ruta `backend/bot/`.
 
-1. Abrir cmd e ir hasta el Desktop
-2. ejecutar: mkdir DeltBot
-3. ejecutar: cd DeltoBot
-4. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
-5. ejecutar: cd deltobot (esto para estar dentro de la desarrollo sin subcarpetas)
-6. ejecutar: code . (para abrir el visual Studio)
-7. En la raiz ejecutar: py -m venv .venv
-8. moverse al frontend: cd frontend
-9. ejecutar: npm install
-10. Volver a la raiz: cd..
-11. en la raiz ejecutar: .venv\Scripts\activate
-12. estando en el entorno virtual
-13. ejecutar: pip install -r requirements.txt
-14. Agregar Clave al firebase_key.json
-15. cuando termine de instalar ejecutar: python start.py
+6. Iniciar el bot:
+   ```bash
+   python start.py
+   ```
 
+---
 
+Listo 🚀¡Ya tenés tu bot listo para funcionar!
 
