@@ -88,7 +88,7 @@ Instalación
 8. moverse al frontend: cd frontend
 9. ejecutar: npm install
 10. Volver a la raiz: cd..
-11. en la raiz ejecutar: venv\Scripts\activate
+11. en la raiz ejecutar: .venv\Scripts\activate
 12. estando en el entorno virtual
 13. ejecutar: pip install -r requirements.txt
 14. Agregar Clave al firebase_key.json
