@@ -45,5 +45,5 @@ async def freeConversation(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 async def endConversation(update: Update, context: ContextTypes.DEFAULT_TYPE):
     usuarioId = update.effective_user.id
     conversacionesPorUsuario.pop(usuarioId, None)
-    await update.message.reply_text("👌 ¡Un gusto hablar contigo! Continue usando el ⌘")
+    await update.message.reply_text("👌 ¡Un gusto hablar contigo! Continue usando el ⌘\nPuedes entrar a: http://localhost:5173/ para ver mas datos")
     return MAIN_MENU
