@@ -32,7 +32,6 @@ deltobot/
 │   ├── api/           
 ├── frontend/
 │
-│.gitignore
 │README.md
 │requirements.txt
 │start.py
@@ -57,14 +56,19 @@ En la web:
 
 Instalación
 
-1. Descargar repositorio
-2. En la raiz ejecutar: python -m venv .venv
-3. cd frontend
-4. ejecutar: npm install
-5. cd..
-6. en la raiz ejecutar: venv\Scripts\activate
-7. estando en el entorno virtual
-8. ejecutar: pip install -r requirements.txt
-9. cuando termine de instalar ejecutar: python start.py
+1. Abrir cmd y ejecutar(con el nombre que corresponda): cd %USERPROFILE%\Desktop
+2. ejecutar: mkdir DeltBot
+3. ejecutar: cd DeltoBot
+4. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
+5. ejecutar: code . (para abrir el visual Studio)
+6. En la raiz ejecutar: python -m venv .venv
+7. moverse al frontend: cd frontend
+8. ejecutar: npm install
+9. Volver a la raiz: cd..
+10. en la raiz ejecutar: venv\Scripts\activate
+11. estando en el entorno virtual
+12. ejecutar: pip install -r requirements.txt
+13. cuando termine de instalar ejecutar: python start.py
+
 
 
