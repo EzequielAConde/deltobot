@@ -13,7 +13,7 @@ import config
 async def iniciar(update: Update, context: ContextTypes.DEFAULT_TYPE):
     usuario = update.effective_user
     nombre = usuario.first_name
-    await update.message.reply_text(f"¡Hola, {nombre}! Soy DeltoBot 🤖 un gusto verte por aquí")
+    await update.message.reply_text(f"¡Hola, {nombre}! Soy DeltoBot 🤖 un gusto verte por aquí\nPuedes entrar a: http://localhost:5173/ para ver mas datos")
     return await showMainMenu(update, context)
 
 
