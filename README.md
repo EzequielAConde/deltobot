@@ -1,121 +1,80 @@
-# 🤖 DELTOBOT
-**Tu asistente virtual retro en Telegram con IA, clima, emociones y datos en tiempo real.**
+# 🤖 DELTOBOT  
+_Asistente virtual retro para Telegram + Dashboard web en tiempo real_
 
 ---
 
-## 📌 Descripción
+## 📌 ¿Qué es DELTOBOT?
 
-**DELTOBOT** es un bot de Telegram potenciado con Inteligencia Artificial que ofrece una experiencia interactiva, útil y entretenida. Con una estética retro y funcionalidades modernas, este asistente puede:
-
-- Consultar el clima de cualquier ciudad con pronósticos y recomendaciones personalizadas.
-- Llevar un contador individual de interacciones por usuario.
-- Analizar el estado emocional de una conversación completa.
-- Conversar libremente con una IA sobre cualquier tema.
-- Mostrar un tablero web estilo retro con información actualizada en tiempo real.
-
-Incluye un **frontend en React** que se conecta a **Firebase** para mostrar:
-- El país más consultado.
-- El pronóstico semanal.
-- Un plan divertido generado por IA.
+DELTOBOT es un bot interactivo para **Telegram**, potenciado con **Inteligencia Artificial**, que ofrece clima, análisis emocional, conversación libre y más. Todo conectado a un **dashboard estilo retro** con datos en tiempo real usando **Firebase**.
 
 ---
 
-## 💪 Tecnologías utilizadas
+## 🧠 Funciones principales
 
-- **Python**: Lógica principal del bot.
-- **FastAPI**: API para exponer datos y procesar la información climática.
-- **React**: Interfaz web con estilo retro (íconos pixelados y fondo animado).
-- **Firebase**: Base de datos en tiempo real.
-- **OpenWeatherMap API**: Fuente de datos meteorológicos.
-- **Cohere API**: Análisis emocional y generación de texto por IA.
+### En Telegram
+
+- `/start`: Inicia el bot.
+- **Clima**: Consultá el clima de cualquier ciudad, con pronóstico y plan divertido sugerido por IA.
+- **Contador**: Guarda la cantidad de interacciones por usuario.
+- **Conversación libre**: Chateá con una IA y pedí análisis emocional de la charla.
+- **Firebase**: Guarda nombre, contador e historial de países consultados.
+
+### En la Web
+
+- **Dashboard retro** en React:
+  - Lista de usuarios e interacciones.
+  - Países más consultados.
+  - Pronóstico semanal.
+  - Plan generado por IA.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **Python** – Lógica del bot.
+- **FastAPI** – API para datos meteorológicos y análisis.
+- **React** – Frontend estilo retro (pixel icons, fondo animado).
+- **Firebase** – Base de datos en tiempo real.
+- **OpenWeatherMap API** – Fuente de datos climáticos.
+- **Cohere API** – Generación de texto + análisis emocional.
 
 ---
 
 ## 🗂️ Estructura del proyecto
-
 ```
 deltobot/
 ├── backend/
 │   ├── bot/           
-│   ├── api/            
-├── frontend/           
+│   ├── api/           
+├── frontend/
 │
-├── README.md
-├── requirements.txt
-├── start.py           
+│README.md
+│requirements.txt
+│start.py
 ```
 
----
+## 🔧 Configuración Firebase
 
-## ⚙️ Funcionalidades
+1. Crear proyecto en [Firebase Console](https://console.firebase.google.com).
+2. Activar **Cloud Firestore** o **Realtime Database** (modo prueba para desarrollo).
+3. Ir a `Configuración > Cuentas de servicio > Admin SDK`.
+4. Generar clave privada y guardarla en backend/bot/firebase_key.json (mas adelante)
 
-### En Telegram
 
-- **/start**: Inicia el bot.
-- **Clima**: Consultá el clima de cualquier ciudad. Devuelve temperatura, pronóstico y un plan sugerido.
-- **Contador**: Cada vez que lo presionás, suma uno y lo guarda por usuario.
-- **Conversación libre**: Hablá con una IA y pedile que analice el estado emocional del diálogo.
-- **Base de datos**: Se guarda nombre, contador e historial de países consultados en Firebase.
+Instalación
 
-### En la Web
-
-- **Dashboard retro** con:
-  - Lista de usuarios e interacciones.
-  - Países más buscados.
-  - Pronóstico semanal del país más consultado.
-  - Plan divertido sugerido por la IA.
-
----
-
-## 🔧 Configuración de Firebase
-
-1. Crear un proyecto en [Firebase Console](https://console.firebase.google.com).
-2. Ir a **Cloud Firestore** o **Realtime Database** y crear la base de datos (modo prueba recomendado para desarrollo).
-3. Navegar a:  
-   `https://console.firebase.google.com/project/NOMBRE_DE_TU_PROYECTO/settings/serviceaccounts/adminsdk`
-4. Generar una nueva clave privada.
-5. Guardar el archivo JSON como `firebase_key.json` en la ruta:  
-   `deltobot/backend/bot/firebase_key.json`
-
----
-
-## 🖥️ Instalación y ejecución
-
-1. Abrí la terminal (cmd) y dirigite al escritorio:
-   ```bash
-   mkdir Deltobot
-   cd Deltobot
-   git clone https://github.com/EzequielAConde/deltobot.git
-   cd deltobot
-   code .  # Abre Visual Studio Code
-   ```
-
-2. Crear y activar entorno virtual:
-   ```bash
-   py -m venv .venv
-   .venv\Scripts\activate
-   ```
-
-3. Instalar dependencias:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Instalar frontend:
-   ```bash
-   cd frontend
-   npm install
-   cd ..
-   ```
-
-5. Agregar el archivo `firebase_key.json` a la ruta `backend/bot/`.
-
-6. Iniciar el bot:
-   ```bash
-   python start.py
-   ```
-
----
-
-Listo 🚀¡Ya tenés tu bot listo para funcionar!
-
+1. Abrir cmd e ir hasta el Desktop
+2. ejecutar: mkdir DeltBot
+3. ejecutar: cd DeltoBot
+4. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
+5. ejecutar: cd deltobot (esto para estar dentro de la desarrollo sin subcarpetas)
+6. ejecutar: code . (para abrir el visual Studio)
+7. En la raiz ejecutar: py -m venv .venv
+8. moverse al frontend: cd frontend
+9. ejecutar: npm install
+10. Volver a la raiz: cd..
+11. en la raiz ejecutar: .venv\Scripts\activate
+12. estando en el entorno virtual
+13. ejecutar: pip install -r requirements.txt
+14. Agregar Clave al firebase_key.json
+15. cuando termine de instalar ejecutar: python start.py
