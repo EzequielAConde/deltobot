@@ -31,9 +31,9 @@ async def handleSelMenu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
 
     elif texto == "Hablar con DeltoBot 🤖":
         await update.message.reply_text(
-            "¡Hola, soy DeltoBot 🤖! Un gusto conocerte, decime en qué puedo ayudarte.\n\n"
+            "¡Hola, soy DeltoBot 🤖 Un gusto conocerte, decime en qué puedo ayudarte.\n\n"
             "1) Usá /cortar para terminar la conversación.\n"
-            "2) *Analiza cómo estuvo la conversación* para sacar un diagnóstico de nuestra charla.",
+            "2) Puedes escribirme *Analiza cómo estuvo la conversación* para sacar un diagnóstico de nuestra charla.",
             parse_mode="Markdown"
         )
         return ANALYZE_SENTIMENT
