@@ -5,7 +5,7 @@ _Asistente virtual retro para Telegram + Dashboard web en tiempo real_
 
 ## 📌 ¿Qué es DELTOBOT?
 
-DELTOBOT es un bot interactivo para **Telegram**, potenciado con **Inteligencia Artificial**, que ofrece clima, análisis emocional, conversación libre y más. Todo conectado a un **dashboard estilo retro** con datos en tiempo real usando **Firebase**.
+DELTOBOT es un bot interactivo para **Telegram**, con **Inteligencia Artificial**, que ofrece clima, análisis emocional, conversación libre y más. Todo conectado a un **dashboard estilo retro** con datos en tiempo real usando **Firebase**.
 
 ---
 
@@ -52,6 +52,9 @@ deltobot/
 │requirements.txt
 │start.py
 ```
+Diagrama del BOT
+![image](https://github.com/user-attachments/assets/40fdcd95-f448-4cbb-addc-840f057b6e26)
+
 
 ## 🔧 Configuración Firebase
 
@@ -69,12 +72,13 @@ Instalación
 4. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
 5. ejecutar: cd deltobot (esto para estar dentro de la desarrollo sin subcarpetas)
 6. ejecutar: code . (para abrir el visual Studio)
-7. En la raiz ejecutar: py -m venv .venv
+7. En la raiz ejecutar: py -m venv venv
 8. moverse al frontend: cd frontend
 9. ejecutar: npm install
 10. Volver a la raiz: cd..
-11. en la raiz ejecutar: .venv\Scripts\activate
+11. en la raiz ejecutar: venv\Scripts\activate
 12. estando en el entorno virtual
 13. ejecutar: pip install -r requirements.txt
-14. Agregar Clave al firebase_key.json
-15. cuando termine de instalar ejecutar: python start.py
+14. Ejecutar pip install -r deltobot/backend/bot/requirements.txt
+15. Agregar Clave al firebase_key.json
+16. cuando termine de instalar ejecutar: python start.py
