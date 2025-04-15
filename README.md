@@ -65,10 +65,7 @@ Diagrama del BOT
 
 
 Instalación
-
-1. Abrir cmd e ir hasta el Desktop
-2. ejecutar: mkdir DeltBot
-3. ejecutar: cd DeltoBot
+1. Crear repositorio o descargar
 4. ejecutar: git clone https://github.com/EzequielAConde/deltobot.git
 5. ejecutar: cd deltobot (esto para estar dentro de la desarrollo sin subcarpetas)
 6. ejecutar: code . (para abrir el visual Studio)
